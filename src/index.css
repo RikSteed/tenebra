@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap");
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #141414;
+  color: #fce7c2;
+}
+
+.mainBox {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.component {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboardButton {
+  width: 10rem;
+}
+
+.dashboardLogo {
+  width: 300px;
+}
+
+.dashboardDescription {
+  margin: 0;
+  max-width: 20rem;
+  text-align: center !important;
+}
+
+.dashboardOr {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+.dashboardButtonsParent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar {
+  max-height: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+.navbarMargin {
+  width: inherit;
+  margin: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userPersona {
+  width: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.userInputLabel {
+  margin: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.userInputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+html,
+body,
+#root,
+.roomEditor,
+.monaco-mouse-cursor-text,
+.margin-view-overlays,
+.view-overlays,
+.zone-widget-container,
+.message,
+.editor-widget,
+.monaco-sash,
+.monaco-list-row,
+.monaco-highlighted-label,
+.can-expand-details,
+.inputBox,
+.buttonBox,
+.popperTooltip {
+  font-family: "Pixelify Sans", sans-serif !important;
+}
+
+.inputBox {
+  padding: 10px;
+  background-color: transparent;
+  border-top: 3.2px solid #fce7c2;
+  border-left: 3.2px solid #fce7c2;
+  border-bottom: none;
+  border-right: none;
+  color: #fce7c2;
+  box-shadow: 3px 3px #fce7c2;
+}
+.inputBox::placeholder {
+  color: #fce7c2;
+}
+.inputBox:focus {
+  outline: none;
+}
+.inputBox:-webkit-autofill,
+.inputBox:-webkit-autofill:focus {
+  box-shadow: 3px 3px #fce7c2, 0 1000px #141414 inset;
+  background-color: #141414;
+  -webkit-text-fill-color: #fce7c2;
+}
+.buttonBox {
+  text-align: center;
+  user-select: none;
+  font-weight: 800;
+  padding: 10px;
+  background-color: transparent;
+  border-top: 3.2px solid #fce7c2;
+  border-left: 3.2px solid #fce7c2;
+  border-bottom: 3.2px solid #141414;
+  border-right: 3.2px solid #141414;
+  background-color: #fce7c2;
+  color: #141414;
+  box-shadow: 3px 3px #fce7c2;
+  transition: 150ms;
+}
+.buttonBox:active {
+  box-shadow: 3px 3px #000;
+  border: 3.2px solid #fce7c2;
+  transform: translate(3px, 3px);
+}
+.buttonBox[disabled] {
+  background-color: #b1a085;
+  border: none;
+  box-shadow: none;
+  transform: none;
+}
+.fui-Toast {
+  width: 100%;
+  background-color: #fce7c2 !important;
+  color: #141414 !important;
+}
+
+.popperBox {
+  background-color: #141414;
+  border: 1px solid #fce7c2;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.anchorPopperBox {
+  display: flex;
+  cursor: pointer;
+  padding: 5px;
+  transition: 100ms;
+  user-select: none;
+}
+.anchorPopperBox:hover {
+  background-color: #fce7c2;
+  color: #000;
+}
+.userAvatarPlaceholder {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: white;
+}
+.userBoxContainer {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+.userNameAndActive {
+  margin-left: 0.5rem;
+}
+.popperTooltip {
+  text-align: center !important;
+  font-size: large !important;
+  border-radius: 0px !important;
+  background-color: #141414 !important;
+  border: 1px solid #fce7c2;
+  display: flex;
+  flex-direction: column;
+}
+.errorMessageBox {
+  text-align: center;
+  padding: 1rem;
+}

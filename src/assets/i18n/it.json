@@ -1,0 +1,32 @@
+{
+  "BROWSER": {
+    "UNSUPPORTED": "Oops! Tenebra non funziona molto bene su mobile!"
+  },
+  "DASHBOARD": {
+    "DESCRIPTION": "Un semplice editor di codice cooperativo WebRTC scritto in React",
+    "JOINROOM": "Entra in una stanza",
+    "NEWROOM": "Nuova stanza",
+    "OR": "o"
+  },
+  "INPUT": {
+    "CONFIRM": "Conferma"
+  },
+  "MISC": {
+    "BETA": "Questa funzione arriverà presto.",
+    "DEER": "Che cosa vuoi?",
+    "YOU": "Tu"
+  },
+  "NAVBAR": {
+    "BETA": "Questa applicazione è in BETA.",
+    "CREDIT": "Sviluppata da Riky",
+    "LANGUAGE": "Lingua"
+  },
+  "ROOM": {
+    "LEFT": "Un utente ha lasciato la sessione.",
+    "WRITING": "Sta scrivendo..."
+  },
+  "USER": {
+    "NICKNAME": "Nickname",
+    "PLACEHOLDER": "Inserisci un nickname"
+  }
+}

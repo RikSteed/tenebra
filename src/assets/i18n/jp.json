@@ -1,0 +1,32 @@
+{
+  "BROWSER": {
+    "UNSUPPORTED": "おっと！Tenebraはモバイルでうまく動作しません！"
+  },
+  "DASHBOARD": {
+    "DESCRIPTION": "Reactで書かれたシンプルな共同作業WebRTCコードエディター。",
+    "JOINROOM": "ルームに参加",
+    "NEWROOM": "新しいルーム",
+    "OR": "または"
+  },
+  "INPUT": {
+    "CONFIRM": "確認"
+  },
+  "MISC": {
+    "BETA": "この機能は近日公開予定です。",
+    "DEER": "何が欲しいですか？",
+    "YOU": "自分"
+  },
+  "NAVBAR": {
+    "BETA": "このアプリはまだベータ版です。",
+    "CREDIT": "Rikyによって開発",
+    "LANGUAGE": "言語"
+  },
+  "ROOM": {
+    "LEFT": "ユーザーがセッションを終了しました。",
+    "WRITING": "書いています..."
+  },
+  "USER": {
+    "NICKNAME": "ニックネーム",
+    "PLACEHOLDER": "ニックネームを入力してください"
+  }
+}

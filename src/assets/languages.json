@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Italiano",
+    "id": "it",
+    "flag": "🇮🇹"
+  },
+  {
+    "name": "English",
+    "id": "en",
+    "flag": "🇺🇸"
+  },
+  {
+    "name": "日本語",
+    "id": "jp",
+    "flag": "🇯🇵"
+  },
+  {
+    "name": "Français",
+    "id": "fr",
+    "flag": "🇫🇷"
+  }
+]
