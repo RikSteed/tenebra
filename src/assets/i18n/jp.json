@@ -4,6 +4,11 @@
   },
   "DASHBOARD": {
     "DESCRIPTION": "Reactで書かれたシンプルな共同作業WebRTCコードエディター。",
+    "JOIN": {
+      "LABEL": "スタンザID",
+      "PLACEHOLDER": "スタンザIDを入力",
+      "TOAST": "スタンザのIDを入力してください"
+    },
     "JOINROOM": "ルームに参加",
     "NEWROOM": "新しいルーム",
     "OR": "または"

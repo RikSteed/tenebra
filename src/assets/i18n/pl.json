@@ -1,0 +1,37 @@
+{
+  "BROWSER": {
+    "UNSUPPORTED": "Ups! Tenebra nie działa najlepiej na urządzeniach mobilnych!"
+  },
+  "DASHBOARD": {
+    "DESCRIPTION": "Prosty edytor kodu oparty na technologii WebRTC napisany w React",
+    "JOIN": {
+      "LABEL": "ID Pokoju",
+      "PLACEHOLDER": "Wprowadź ID pokoju",
+      "TOAST": "Wprowadź ID pokoju"
+    },
+    "JOINROOM": "Dołącz do pokoju",
+    "NEWROOM": "Nowy pokój",
+    "OR": "lub"
+  },
+  "INPUT": {
+    "CONFIRM": "Potwierdź"
+  },
+  "MISC": {
+    "BETA": "Ta funkcja będzie dostępna wkrótce.",
+    "DEER": "Czego chcesz?",
+    "YOU": "Ty"
+  },
+  "NAVBAR": {
+    "BETA": "Ta aplikacja jest w fazie BETA.",
+    "CREDIT": "Rozwinięta przez Riky",
+    "LANGUAGE": "Język"
+  },
+  "ROOM": {
+    "LEFT": "Użytkownik opuścił sesję.",
+    "WRITING": "Pisze..."
+  },
+  "USER": {
+    "NICKNAME": "Nick",
+    "PLACEHOLDER": "Wprowadź nick"
+  }
+}

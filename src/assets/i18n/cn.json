@@ -1,0 +1,37 @@
+{
+  "BROWSER": {
+    "UNSUPPORTED": "哎呀！在移动设备上，Tenebra 的性能表现不佳！"
+  },
+  "DASHBOARD": {
+    "DESCRIPTION": "一个使用 React 编写的简单的 WebRTC 合作式代码编辑器",
+    "JOIN": {
+      "LABEL": "房间ID",
+      "PLACEHOLDER": "输入房间ID",
+      "TOAST": "请输入房间ID"
+    },
+    "JOINROOM": "加入房间",
+    "NEWROOM": "新建房间",
+    "OR": "或"
+  },
+  "INPUT": {
+    "CONFIRM": "确认"
+  },
+  "MISC": {
+    "BETA": "此功能即将推出。",
+    "DEER": "你想要什么？",
+    "YOU": "你"
+  },
+  "NAVBAR": {
+    "BETA": "此应用程序处于测试阶段。",
+    "CREDIT": "由 Riky 开发",
+    "LANGUAGE": "语言"
+  },
+  "ROOM": {
+    "LEFT": "有用户离开了会话。",
+    "WRITING": "正在输入..."
+  },
+  "USER": {
+    "NICKNAME": "昵称",
+    "PLACEHOLDER": "输入昵称"
+  }
+}

@@ -4,6 +4,11 @@
   },
   "DASHBOARD": {
     "DESCRIPTION": "A simple cooperative WebRTC code editor written in React.",
+    "JOIN": {
+      "LABEL": "Room ID",
+      "PLACEHOLDER": "Enter a room id",
+      "TOAST": "Please provide a room ID"
+    },
     "JOINROOM": "Join room",
     "NEWROOM": "New room",
     "OR": "or"
