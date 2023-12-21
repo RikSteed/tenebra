@@ -21,7 +21,9 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbarMargin">
-        <a className="buttonBox">Github</a>
+        <a href="https://github.com/RikSteed" className="buttonBox githubAnchor">
+          Github
+        </a>
         <h6 style={{ margin: "0", textAlign: "center" }}>
           {I18N.NAVBAR.CREDIT}
           <br />
