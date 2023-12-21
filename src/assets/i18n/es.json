@@ -1,0 +1,37 @@
+{
+  "BROWSER": {
+    "UNSUPPORTED": "¡Ups! ¡Tenebra no funciona muy bien en dispositivos móviles!"
+  },
+  "DASHBOARD": {
+    "DESCRIPTION": "Un sencillo editor de código cooperativo basado en WebRTC y escrito en React",
+    "JOIN": {
+      "LABEL": "ID de Sala",
+      "PLACEHOLDER": "Ingresa el ID de la sala",
+      "TOAST": "Ingresa un ID para la sala"
+    },
+    "JOINROOM": "Unirse a una sala",
+    "NEWROOM": "Nueva sala",
+    "OR": "o"
+  },
+  "INPUT": {
+    "CONFIRM": "Confirmar"
+  },
+  "MISC": {
+    "BETA": "Esta función estará disponible pronto.",
+    "DEER": "¿Qué deseas?",
+    "YOU": "Tú"
+  },
+  "NAVBAR": {
+    "BETA": "Esta aplicación está en BETA.",
+    "CREDIT": "Desarrollada por Riky",
+    "LANGUAGE": "Idioma"
+  },
+  "ROOM": {
+    "LEFT": "Un usuario ha abandonado la sesión.",
+    "WRITING": "Está escribiendo..."
+  },
+  "USER": {
+    "NICKNAME": "Apodo",
+    "PLACEHOLDER": "Ingresa un apodo"
+  }
+}

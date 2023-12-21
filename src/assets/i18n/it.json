@@ -4,6 +4,11 @@
   },
   "DASHBOARD": {
     "DESCRIPTION": "Un semplice editor di codice cooperativo WebRTC scritto in React",
+    "JOIN": {
+      "LABEL": "ID Stanza",
+      "PLACEHOLDER": "Inserisci l'id della stanza",
+      "TOAST": "Inserisci un ID per la stanza"
+    },
     "JOINROOM": "Entra in una stanza",
     "NEWROOM": "Nuova stanza",
     "OR": "o"

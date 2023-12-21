@@ -1,0 +1,37 @@
+{
+  "BROWSER": {
+    "UNSUPPORTED": "Hoppla! Tenebra funktioniert auf Mobilgeräten nicht optimal!"
+  },
+  "DASHBOARD": {
+    "DESCRIPTION": "Ein einfacher, in React geschriebener kooperativer WebRTC-Codeeditor",
+    "JOIN": {
+      "LABEL": "Raum-ID",
+      "PLACEHOLDER": "Gib die Raum-ID ein",
+      "TOAST": "Gib eine ID für den Raum ein"
+    },
+    "JOINROOM": "Betritt einen Raum",
+    "NEWROOM": "Neuer Raum",
+    "OR": "oder"
+  },
+  "INPUT": {
+    "CONFIRM": "Bestätigen"
+  },
+  "MISC": {
+    "BETA": "Diese Funktion wird bald verfügbar sein.",
+    "DEER": "Was möchtest du?",
+    "YOU": "Du"
+  },
+  "NAVBAR": {
+    "BETA": "Diese Anwendung befindet sich im BETA-Stadium.",
+    "CREDIT": "Entwickelt von Riky",
+    "LANGUAGE": "Sprache"
+  },
+  "ROOM": {
+    "LEFT": "Ein Benutzer hat die Sitzung verlassen.",
+    "WRITING": "Schreibt gerade..."
+  },
+  "USER": {
+    "NICKNAME": "Spitzname",
+    "PLACEHOLDER": "Gib einen Spitznamen ein"
+  }
+}

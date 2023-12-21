@@ -18,5 +18,25 @@
     "name": "Français",
     "id": "fr",
     "flag": "🇫🇷"
+  },
+  {
+    "name": "Polski",
+    "id": "pl",
+    "flag": "🇵🇱"
+  },
+  {
+    "name": "中文",
+    "id": "cn",
+    "flag": "🇨🇳"
+  },
+  {
+    "name": "Deutsch",
+    "id": "de",
+    "flag": "🇩🇪"
+  },
+  {
+    "name": "Español",
+    "id": "es",
+    "flag": "🇪🇸"
   }
 ]
