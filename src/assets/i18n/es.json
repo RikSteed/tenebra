@@ -27,6 +27,7 @@
     "LANGUAGE": "Idioma"
   },
   "ROOM": {
+    "JOIN": "Un usuario se ha unido a la sesión.",
     "LEFT": "Un usuario ha abandonado la sesión.",
     "WRITING": "Está escribiendo..."
   },
