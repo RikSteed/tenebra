@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { StoreContext } from "../provider/StoreProvider";
 import { v4 as uuid4 } from "uuid";
@@ -8,81 +8,121 @@ import RoomEditor from "./RoomEditor/RoomEditor";
 import { Toast, ToastTitle, Toaster, useId, useToastController } from "@fluentui/react-components";
 import User from "./User";
 
-let peerRoom;
-let resetTimeout;
-let sendCode;
-let getCode;
-
 const Room = () => {
   const { user, I18N } = useContext(StoreContext);
   const { room } = useParams();
   const [isUserLogged, setUserLogged] = useState(user !== undefined);
   const [connectedUsers, setConnectedUser] = useState([]);
   const [code, setCode] = useState("");
-  const [active, setActive] = useState();
+  const [active, setActive] = useState(null);
   const toasterId = useId("tenebraToast");
   const { dispatchToast } = useToastController(toasterId);
+
+  const peerRoomRef = useRef(null);
+  const sendCodeRef = useRef(null);
+  const resetTimeoutRef = useRef(null);
 
   const handleUserLogin = () => {
     setUserLogged(true);
   };
 
-  const handleUserConnection = useCallback(
-    (user, isRemoving) => {
-      if (isRemoving) {
-        const toastId = uuid4();
-        dispatchToast(
-          <Toast>
-            <ToastTitle>{I18N.ROOM.LEFT}</ToastTitle>
-          </Toast>,
-          { position: "bottom", intent: "info", toastId }
-        );
-        return setConnectedUser((prev) => prev.filter((_user) => _user.peerId !== user.peerId));
-      }
-      return setConnectedUser((prev) => [...prev, user]);
+  const showToast = useCallback(
+    (message, intent = "info") => {
+      dispatchToast(
+        <Toast>
+          <ToastTitle>{message}</ToastTitle>
+        </Toast>,
+        { position: "bottom", intent, toastId: uuid4() }
+      );
     },
-    [I18N, dispatchToast]
+    [dispatchToast]
   );
+
+  const handleUserConnection = useCallback(
+    (newUser, isRemoving) => {
+      if (isRemoving) {
+        showToast(I18N.ROOM.LEFT, "info");
+        setConnectedUser((prev) => prev.filter((_user) => _user.peerId !== newUser.peerId));
+      } else {
+        setConnectedUser((prev) => {
+          const exists = prev.some((_user) => _user.peerId === newUser.peerId);
+          if (exists) return prev;
+          if (newUser.peerId) {
+            showToast(I18N.ROOM.JOIN, "success");
+          }
+          return [...prev, newUser];
+        });
+      }
+    },
+    [I18N, showToast]
+  );
+
   useEffect(() => {
     if (!user) {
       return;
     }
-    if (!peerRoom) {
-      handleUserConnection(user);
+
+    if (!peerRoomRef.current) {
+      handleUserConnection(user, false);
+
       const config = { appId: room };
-      peerRoom = joinRoom(config, "tenebra");
-      const [sendUser, getUser] = peerRoom.makeAction("name");
-      [sendCode, getCode] = peerRoom.makeAction("code");
-      peerRoom.onPeerJoin((peerId) => {
+      peerRoomRef.current = joinRoom(config, "tenebra");
+      const [sendUser, getUser] = peerRoomRef.current.makeAction("name");
+      const [sendCode, getCode] = peerRoomRef.current.makeAction("code");
+      sendCodeRef.current = sendCode;
+
+      peerRoomRef.current.onPeerJoin((peerId) => {
         sendUser(user, peerId);
-        sendCode(code);
+        if (code) {
+          sendCode(code);
+        }
       });
+
       getUser((userPeer, peerId) => {
-        userPeer.peerId = peerId;
-        handleUserConnection(userPeer, false);
+        const peerUser = { ...userPeer, peerId };
+        handleUserConnection(peerUser, false);
       });
-      getCode((code, peerId) => {
-        clearTimeout(resetTimeout);
+
+      getCode((receivedCode, peerId) => {
+        if (resetTimeoutRef.current) {
+          clearTimeout(resetTimeoutRef.current);
+        }
         setActive(peerId);
-        setCode(code);
-        resetTimeout = setTimeout(() => {
+        setCode(receivedCode);
+        resetTimeoutRef.current = setTimeout(() => {
           setActive(null);
         }, 1000);
       });
-      peerRoom.onPeerLeave((peerId) => {
-        const nickname = connectedUsers.find((user) => user.peerId === peerId);
-        const userExit = { nickname, peerId };
-        handleUserConnection(userExit, true);
+
+      peerRoomRef.current.onPeerLeave((peerId) => {
+        setConnectedUser((prevUsers) => {
+          const userToRemove = prevUsers.find((u) => u.peerId === peerId);
+          if (userToRemove) {
+            handleUserConnection(userToRemove, true);
+          }
+          return prevUsers;
+        });
       });
     }
 
     return () => {
-      peerRoom.leave();
+      if (resetTimeoutRef.current) {
+        clearTimeout(resetTimeoutRef.current);
+      }
+      if (peerRoomRef.current) {
+        peerRoomRef.current.leave();
+        peerRoomRef.current = null;
+      }
+      sendCodeRef.current = null;
     };
-  }, [user]);
-  const handleOnChange = (data) => {
-    sendCode(data);
-  };
+  }, [user, room, handleUserConnection, code]);
+
+  const handleOnChange = useCallback((data) => {
+    setCode(data);
+    if (sendCodeRef.current) {
+      sendCodeRef.current(data);
+    }
+  }, []);
   return isUserLogged ? (
     <div
       style={{
